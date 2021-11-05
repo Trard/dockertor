@@ -6,10 +6,8 @@ RUN apt-get install -y curl
 RUN curl -sL https://deb.nodesource.com/setup_16.x | bash -
 RUN apt-get install -y nodejs tor
 
-RUN /usr/bin/tor --RunAsDaemon 1
-
 WORKDIR /test
 COPY . /test
 RUN npm install --only=prod
 
-CMD ["npm", "run", "start"]
+ENTRYPOINT ["bash", "start.bash"]
