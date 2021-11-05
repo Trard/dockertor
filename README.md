@@ -1,3 +1,5 @@
+see fix in https://github.com/talmobi/tor-request/issues/69
+
 # Commands
 
 ## Docker
